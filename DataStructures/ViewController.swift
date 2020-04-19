@@ -10,6 +10,7 @@ import UIKit
 
 enum Type {
     case stack
+    case linkedList
 }
 
 class ViewController: UIViewController {
@@ -20,12 +21,15 @@ class ViewController: UIViewController {
         
     }
     
-    private var type: Type = .stack
+    private var type: Type = .linkedList
     
     @IBAction func next() {
         switch type {
         case .stack:
             let vc = StackViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .linkedList:
+            let vc = LinkedListViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

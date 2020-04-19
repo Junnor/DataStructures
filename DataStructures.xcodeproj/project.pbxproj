@@ -14,6 +14,7 @@
 		8B6E713D244C78FD00789320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E713C244C78FD00789320 /* Assets.xcassets */; };
 		8B6E7140244C78FD00789320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E713E244C78FD00789320 /* LaunchScreen.storyboard */; };
 		8B6E7148244C793B00789320 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7147244C793B00789320 /* StackViewController.swift */; };
+		8B6E714A244C80AE00789320 /* LinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7149244C80AE00789320 /* LinkedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8B6E713F244C78FD00789320 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B6E7141244C78FD00789320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E7147244C793B00789320 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		8B6E7149244C80AE00789320 /* LinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8B6E7135244C78FC00789320 /* SceneDelegate.swift */,
 				8B6E7137244C78FC00789320 /* ViewController.swift */,
 				8B6E7147244C793B00789320 /* StackViewController.swift */,
+				8B6E7149244C80AE00789320 /* LinkedListViewController.swift */,
 				8B6E7139244C78FC00789320 /* Main.storyboard */,
 				8B6E713C244C78FD00789320 /* Assets.xcassets */,
 				8B6E713E244C78FD00789320 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				8B6E7138244C78FC00789320 /* ViewController.swift in Sources */,
 				8B6E7148244C793B00789320 /* StackViewController.swift in Sources */,
 				8B6E7134244C78FC00789320 /* AppDelegate.swift in Sources */,
+				8B6E714A244C80AE00789320 /* LinkedListViewController.swift in Sources */,
 				8B6E7136244C78FC00789320 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
