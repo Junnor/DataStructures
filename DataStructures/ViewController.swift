@@ -11,17 +11,17 @@ import UIKit
 enum Type {
     case stack
     case linkedList
+    case queue
 }
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
     }
     
-    private var type: Type = .linkedList
+    private var type: Type = .queue
     
     @IBAction func next() {
         switch type {
@@ -30,6 +30,9 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         case .linkedList:
             let vc = LinkedListViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .queue:
+            let vc = QueueViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

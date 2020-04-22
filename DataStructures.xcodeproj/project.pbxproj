@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B547C6224507F9E00EA811B /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B547C6124507F9E00EA811B /* QueueViewController.swift */; };
+		8B547C642450924E00EA811B /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B547C632450924E00EA811B /* DoublyLinkedList.swift */; };
 		8B6E7134244C78FC00789320 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7133244C78FC00789320 /* AppDelegate.swift */; };
 		8B6E7136244C78FC00789320 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7135244C78FC00789320 /* SceneDelegate.swift */; };
 		8B6E7138244C78FC00789320 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E7137244C78FC00789320 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B547C6124507F9E00EA811B /* QueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueViewController.swift; sourceTree = "<group>"; };
+		8B547C632450924E00EA811B /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		8B6E7130244C78FC00789320 /* DataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6E7133244C78FC00789320 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B6E7135244C78FC00789320 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				8B6E7137244C78FC00789320 /* ViewController.swift */,
 				8B6E7147244C793B00789320 /* StackViewController.swift */,
 				8B6E7149244C80AE00789320 /* LinkedListViewController.swift */,
+				8B547C6124507F9E00EA811B /* QueueViewController.swift */,
+				8B547C632450924E00EA811B /* DoublyLinkedList.swift */,
 				8B6E7139244C78FC00789320 /* Main.storyboard */,
 				8B6E713C244C78FD00789320 /* Assets.xcassets */,
 				8B6E713E244C78FD00789320 /* LaunchScreen.storyboard */,
@@ -146,6 +152,8 @@
 			files = (
 				8B6E7138244C78FC00789320 /* ViewController.swift in Sources */,
 				8B6E7148244C793B00789320 /* StackViewController.swift in Sources */,
+				8B547C642450924E00EA811B /* DoublyLinkedList.swift in Sources */,
+				8B547C6224507F9E00EA811B /* QueueViewController.swift in Sources */,
 				8B6E7134244C78FC00789320 /* AppDelegate.swift in Sources */,
 				8B6E714A244C80AE00789320 /* LinkedListViewController.swift in Sources */,
 				8B6E7136244C78FC00789320 /* SceneDelegate.swift in Sources */,
