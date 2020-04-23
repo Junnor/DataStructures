@@ -45,15 +45,46 @@ class QueueViewController: UIViewController {
         queue.peek
         print("After peek, Queue: \(queue)")
     }
-
     
+    private func queueRingBufferTest() {
+        var queue = QueueRingBuffer<String>(count: 10)
+        queue.enqueue("C")
+        queue.enqueue("Swift")
+        queue.enqueue("Objective-C")
+        
+        print("Queue: \(queue)")
+        
+        queue.dequeue()
+        print("After dequeue, Queue: \(queue)")
+        
+        queue.peek
+        print("After peek, Queue: \(queue)")
+    }
+
+
+    private func queueStackTest() {
+        var queue = QueueStack<String>()
+        queue.enqueue("C")
+        queue.enqueue("Swift")
+        queue.enqueue("Objective-C")
+        
+        print("Queue: \(queue)")
+        
+        queue.dequeue()
+        print("After dequeue, Queue: \(queue)")
+        
+        queue.peek
+        print("After peek, Queue: \(queue)")
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        queueLinkedListTest()
+        queueStackTest()
     }
     
 }
+
 
 
 
@@ -144,3 +175,83 @@ extension QueueLinkedList: CustomStringConvertible {
     }
 }
 
+
+// MARK: - QueueRingBuffer
+
+public struct QueueRingBuffer<T>: Queue {
+    
+    private var ringBuffer: RingBuffer<T>
+    
+    init(count: Int) {
+        ringBuffer = RingBuffer<T>(count: count)
+    }
+    
+    public var isEmpty: Bool {
+        return ringBuffer.isEmpty
+    }
+    
+    public var peek: T? {
+        return ringBuffer.first
+    }
+    
+    public mutating func enqueue(_ element: T) -> Bool {
+        ringBuffer.write(element)
+    }
+    
+    public mutating func dequeue() -> T? {
+        ringBuffer.read()
+    }
+    
+}
+
+extension QueueRingBuffer: CustomStringConvertible {
+    
+    public var description: String {
+        String(describing: ringBuffer)
+    }
+    
+}
+
+
+// MARK: - QueueStack
+
+public struct QueueStack<T>: Queue {
+    
+    private var leftStack: [T] = []
+    private var rightStack: [T] = []
+    
+    public init() { }
+    
+    public var isEmpty: Bool {
+        return leftStack.isEmpty && rightStack.isEmpty
+    }
+    
+    public var peek: T? {
+        !leftStack.isEmpty ? leftStack.last : rightStack.first
+    }
+
+    
+    public mutating func enqueue(_ element: T) -> Bool {
+        rightStack.append(element)
+        return true
+    }
+    
+    public mutating func dequeue() -> T? {
+        // 如果出队数组为空，则引用入队数组里面的倒序数组数据
+        if leftStack.isEmpty {
+            leftStack = rightStack.reversed()
+            rightStack.removeAll()
+        }
+        
+        return leftStack.popLast()
+    }
+    
+}
+
+extension QueueStack: CustomStringConvertible {
+    
+    public var description: String {
+        String(describing: leftStack.reversed() + rightStack)
+    }
+    
+}
